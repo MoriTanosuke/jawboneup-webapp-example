@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jawbone Up example webapp</title>
-
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
-</head>
+<head th:replace="head"/>
 <body>
 
 <header th:include="header" />
@@ -17,11 +10,16 @@
         demonstrate
         the use of the <a href="https://jawbone.com/up/developer">Jawbone Up API</a>.
     </div>
+    <div>You can now <a href="/login">log in with Jawbone</a>.
+        <span class="warning">This will not work yet, because I missed adding SSL support to the embedded
+        jetty. You can continue after you get the <em>"SSL connection error"</em>, but you will have
+        to replace "https" with "http" in your address bar.</span></div>
 </section>
 
-<footer th:include="footer" />
+<footer th:replace="footer"/>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
